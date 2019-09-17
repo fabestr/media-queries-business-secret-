@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color:#be3a17;
+}
+
+/***************************************************************
+***************************************************************/
+.ital {
+    font-style: italic;
+}
+
+.strong {
+    font-weight: bold; 
+}
+
+.color-brown {
+    color: #be3a17;
+}
+
+
+
+/******************************************************************
+*******************************HEADER***************************/
+header {
+    background-color: #f9f9f1;
+}
+
+
+
+.compagny {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.compagny h1 {
+    background-color: #be3a17;
+    color:white;
+    margin-bottom: 0;
+    padding:0.2em 1.25em;
+}
+
+.compagny p {
+    margin-bottom: 0;
+}
+
+.main-nav {
+    background-color: #ecead8
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding:0;
+    margin:0
+}
+
+.main-nav ul li {
+    line-height: 2em;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0.5em;
+    
+}
+
+.main-nav ul li:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+}
+
+.main-nav ul li+li {
+    border-left: 2px solid white;
+}
+
+.main-nav ul li:first-child {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+   /*  border-bottom: 2px solid white; */
+    
+}
+
+.main-nav ul li:last-child {
+    border-right: 2px solid white;
+}
+
+
+
+.img-title {
+    background-image: url('images/people.jpg');
+    background-position-x: 50vw;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.img-title h1 {
+    margin:0;
+}
+
+.discover {
+    font-size: 1.5em;
+}
+
+.business {
+    display: block;
+    font-size: 4em;
+    padding-bottom: 0;
+}
+
+.secrets {
+    color: #be3a17;
+    font-size: 4em;
+    padding: 0 0.8em;
+}
+
+.success {
+    display: block;
+    margin-left: 3em;
+}
+
+
+/************************************************************************
+**********************************MAIN**********************************/
+
+
+/*************************Section-1***************************************/
+
+.main-sect-1 {
+    background-color:  #ecead8;
+}
+
+.section-1 {
+    display:flex;
+}
+
+.section-1 article {
+    width:30%;
+    margin: 1em 0.5em;
+}
+
+.section-1 aside {
+    width:30%;
+    margin: 1em 0.5em;
+}
+.section-1 aside ul {
+    list-style: none;
+}
+
+
+.section-1 h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.section-1 h2 {
+    margin:0 0;
+}
+
+.section-1 .photo {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+.section-1 .newsletter {
+    background-color: #be3a17;
+    padding-bottom: 3%;
+}
+
+.section-1 .newsletter h3 {
+    color:white;
+    padding: 0.5em 1em;
+}
+
+
+.section-1 .newsletter input {
+    margin:2% 5%;
+}
+
+.section-1 .newsletter button {
+    background-color: orangered;
+    color:white;
+}
+
+.section-1 .newsletter a {
+    margin:2% 5%;
+    color:white;
+}
+
+.section-1 .newsletter ul {
+    list-style: none;
+}
+
+
+
+
+/************************************************************************
+*********************SECTION 2************************************/
+
+.main-sect-2 {
+    background-color: #dad5bb;
+}
+
+.section-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    padding:1% 1%
+}
+
+.section-2 nav {
+    width:30%;
+}
+
+.section-2 nav ul {
+    list-style: none;
+}
+
+.section-2 .grey {
+    color:grey;
+}
+
+/*************************FOOTER*************************************/
+
+footer {
+    padding:1em 1em;
+}
+
+
+/**************************************************************************************
+**********************MEDIA QUERIES*******************************************************/
+
+/**********************TABLETTE******************************/
+
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+    .img-title {
+        background-image: url('images/people.jpg');
+        background-position-x: center;
+        background-position-y: 32vh;
+        background-repeat: no-repeat;
+        background-size: auto 60%;
+        text-align: center;
+
+    }
+
+    .img-title h1 {
+        padding-bottom: 30%;
+    }
+
+
+    /******************section-1********************************************/
+    .section-1 {
+        flex-wrap: wrap;
+    }
+
+    .section-1 article {
+        width:48%;
+        margin: 1em 0.5em;
+    }
+
+
+    /**************************SECTION-2************************************/
+
+    .section-2 {
+        flex-wrap: wrap;
+    }
+
+    .section-2 nav {
+        width:50%;
+    }
+
+}
+
+
+/**********************PHONE***********************************/
+
+@media screen and (max-width:480px) {
+
+    /*************header********************************/
+
+    
+    .compagny {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .compagny h1 {
+        text-align: center;
+        width:100%;
+    }
+
+    .main-nav ul {
+       flex-direction: column;
+    }
+
+    .main-nav ul li {
+        line-height: 1.5em;
+        padding: 0.5em;
+        width:100%;
+        border-bottom: 1px solid #d3c69b;
+
+    }
+
+    .main-nav ul li+li {
+        border-left: none;
+    }
+    
+    .main-nav ul li:first-child {
+        border-left:none;
+        border-top: none;
+       /*  border-bottom: 2px solid white; */
+        
+    }
+
+    .main-nav ul li:last-child {
+        border-right: none;
+    }
+
+    .img-title {
+        background-image: url('images/people.jpg');
+        background-position-x: center;
+        background-position-y: 32vh;
+        background-repeat: no-repeat;
+        background-size: auto 60%;
+        text-align: center;
+
+    }
+
+    .img-title h1 {
+        padding-bottom: 30%;
+    }
+
+
+    /****************SECTION-1*****************************/
+
+    .section-1 {
+        flex-wrap: wrap;
+    }
+
+    .section-1 article {
+        width:100%;
+        margin: 1em 0.5em;
+    }
+
+    .section-1 aside {
+        width:100%;
+        margin: 1em 0.5em;
+    }
+
+
+    /****************SECTION-2*********************************/
+
+    .main-sect-2 {
+        display: none;
+    }
+
+    /*******************FOOTER*********************************/
+
+    footer {
+        display: none;
+    }
+}
